@@ -13,8 +13,8 @@
 #import "Fication.h"
 #import "GuaitableViewcell.h"
 #import "GuaiTab.h"
-
-@interface GuaiTabViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
+#import "GuaishowTableViewController.h"
+@interface GuaiTabViewController ()<UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>
 //用来存放所有子控制器的view
 @property (nonatomic,weak) UIScrollView *scrollview;
 //标题栏
@@ -31,13 +31,15 @@
 
 //视图界面的数据
 @property(nonatomic,strong) NSArray *viewdata;
+
+@property(nonatomic) NSInteger indexs;
 @end
 
 @implementation GuaiTabViewController
-- (instancetype)initWithFicationId:(NSString *) ficationId {
+- (instancetype)initWithFicationId:(NSInteger) ficationId {
     if (self = [super init]) {
-        //        NSLog(@"----->bookid:%@", bookId);
-        //        BID=bookId;
+        
+        self.indexs=ficationId;
     }
     return self;
 }
@@ -98,6 +100,7 @@
         if(i%2==0){
             tableview.backgroundColor=[UIColor greenColor];
         }
+        tableview.delegate = self;
         tableview.dataSource=self;
         tableview.rowHeight=150;
 //        tableview.delegate=self;
@@ -130,8 +133,14 @@
         
         
          [self setupTitleButtons:_car];
+        CGFloat offsetx=self.scrollview.widht * self.indexs;
+        self.scrollview.contentOffset=CGPointMake(offsetx, self.scrollview.contentOffset.y);
+        UIButton *titleButton=self.titlesValue.subviews[self.indexs];
+        CGFloat centerx=titleButton.center.x;
 
-       
+        self.titlesUnderline.centerX = centerx;
+        
+//        [self titleButtonClick:button];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -257,6 +266,20 @@
     
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    self.navigationController.view.backgroundColor = [UIColor whiteColor];
+//    GuaiModelcell *item = self.subTasg[indexPath.row];
+    Guaitab *itemtab = [Guaitab mj_objectWithKeyValues:self.viewdata[tableView.tag][@"dataList"][indexPath.row]];
+    GuaishowTableViewController  *guaishow=[[GuaishowTableViewController alloc] initWithUserInfo:itemtab.booksId];
+    guaishow.title=itemtab.booksName;
+    guaishow.view.backgroundColor =[UIColor whiteColor];
+    guaishow.hidesBottomBarWhenPushed = YES;
+    self.navigationController.interactivePopGestureRecognizer.delegate=nil;
+    [self.navigationController pushViewController:guaishow animated:YES];
+}
 
 
 @end

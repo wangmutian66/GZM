@@ -305,8 +305,10 @@ YSLoopBanner *loop;
             
             view1.frame = CGRectMake((onwidth*i)+10*(i+1),5,onwidth,onwidth);
             UIView *view = [[UIView alloc] init];
-            UITapGestureRecognizer *tapGesturRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction)];
-//            tapGesturRecognizer.view.tag=_ficationarray[i][@"ficationId"];
+            view.tag=i;
+            UITapGestureRecognizer *tapGesturRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
+            NSLog(@"i: %d",i);
+            
             [view addGestureRecognizer:tapGesturRecognizer];
             
             
@@ -358,11 +360,13 @@ YSLoopBanner *loop;
 }
 
 
--(void)tapAction{
+-(void)tapAction:(id)sender{
+    UITapGestureRecognizer *tap = (UITapGestureRecognizer*)sender;
+    UIView *views = (UIView*) tap.view;
 
     self.navigationController.view.backgroundColor = [UIColor whiteColor];
   
-    GuaiTabViewController  *tab=[[GuaiTabViewController alloc] initWithFicationId:@"0"];
+    GuaiTabViewController  *tab=[[GuaiTabViewController alloc] initWithFicationId:views.tag];
     tab.title=@"怪掌门";
     tab.view.backgroundColor =[UIColor whiteColor];
     tab.hidesBottomBarWhenPushed = YES;

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GuaiTabViewController : UIViewController
-- (instancetype)initWithFicationId:(NSString *) ficationId;
+- (instancetype)initWithFicationId:(NSInteger) ficationId;
 @end
