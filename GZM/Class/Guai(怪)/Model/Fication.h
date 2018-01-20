@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Fication : NSObject
+@property(nonatomic,strong) NSString *ficationId;
 @property(nonatomic,strong) NSString *name;
 @property(nonatomic,strong) NSString *img;
 @end

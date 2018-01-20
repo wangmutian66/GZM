@@ -244,7 +244,8 @@ YSLoopBanner *loop;
         _bannerarray=[ZhangBannerModel mj_objectArrayWithKeyValuesArray:adDict];
         NSMutableArray *array3 = [NSMutableArray arrayWithCapacity:_bannerarray.count];
      
-        for(NSInteger i=0;i<_bannerarray.count;i++){            ZhangBannerModel *baner= self.bannerarray[i];
+        for(NSInteger i=0;i<_bannerarray.count;i++){
+            ZhangBannerModel *baner= self.bannerarray[i];
             [array3  insertObject:baner.bannerImg atIndex:i];
             
         }

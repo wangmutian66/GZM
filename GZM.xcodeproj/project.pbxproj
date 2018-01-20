@@ -17,7 +17,6 @@
 		EC469188200C3A5B0061C1AF /* pinglunModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC469187200C3A5B0061C1AF /* pinglunModel.m */; };
 		EC46918C200C3B300061C1AF /* PinglunTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC46918A200C3B300061C1AF /* PinglunTableViewCell.m */; };
 		EC46918D200C3B300061C1AF /* PinglunTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC46918B200C3B300061C1AF /* PinglunTableViewCell.xib */; };
-		EC469192200CC6230061C1AF /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC469191200CC6230061C1AF /* WXApiManager.m */; };
 		EC5826D81FFBC5FE009758A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5826D61FFBC5FE009758A3 /* Main.storyboard */; };
 		EC5826DA1FFBC5FE009758A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5826D91FFBC5FE009758A3 /* Assets.xcassets */; };
 		EC5826DD1FFBC5FE009758A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5826DB1FFBC5FE009758A3 /* LaunchScreen.storyboard */; };
@@ -31,6 +30,13 @@
 		EC58274A1FFDC6AD009758A3 /* GuaitableViewcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC5827481FFDC6AD009758A3 /* GuaitableViewcell.xib */; };
 		EC58274F1FFDE80D009758A3 /* YSLoopBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58274E1FFDE80D009758A3 /* YSLoopBanner.m */; };
 		EC5827511FFDFBE2009758A3 /* MenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC5827501FFDFBE2009758A3 /* MenViewController.xib */; };
+		ECF0E7912012206E00BD58C7 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF0E78F2012206D00BD58C7 /* WXApiManager.m */; };
+		ECF0E79E201220E200BD58C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECF0E793201220E100BD58C7 /* InfoPlist.strings */; };
+		ECF0E79F201220E200BD58C7 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF0E795201220E100BD58C7 /* ViewController_iPad.xib */; };
+		ECF0E7A0201220E200BD58C7 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF0E797201220E100BD58C7 /* ViewController_iPhone.xib */; };
+		ECF0E7A1201220E200BD58C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF0E79A201220E100BD58C7 /* LaunchScreen.storyboard */; };
+		ECF0E7A2201220E200BD58C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF0E79C201220E100BD58C7 /* Main.storyboard */; };
+		ECF0E7A52012DD0B00BD58C7 /* Guaitab.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF0E7A42012DD0B00BD58C7 /* Guaitab.m */; };
 		ECF1C4F31FFF4231005AB7D4 /* GuaishowTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF1C4F21FFF4231005AB7D4 /* GuaishowTableViewController.m */; };
 		ECFF84871FFF722600203881 /* GuaishowTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECFF84861FFF722600203881 /* GuaishowTableViewController.xib */; };
 		ECFF849420008F7F00203881 /* ZhangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFF849320008F7F00203881 /* ZhangViewController.m */; };
@@ -78,8 +84,6 @@
 		EC469189200C3B300061C1AF /* PinglunTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PinglunTableViewCell.h; sourceTree = "<group>"; };
 		EC46918A200C3B300061C1AF /* PinglunTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinglunTableViewCell.m; sourceTree = "<group>"; };
 		EC46918B200C3B300061C1AF /* PinglunTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinglunTableViewCell.xib; sourceTree = "<group>"; };
-		EC469190200CC6230061C1AF /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApiManager.h; path = "../../../../Desktop/SDKSample_ios9_v2.0.2_V3_pay 2/SDKSample_v2.0.2_V3pay/Control/WXApiManager.h"; sourceTree = "<group>"; };
-		EC469191200CC6230061C1AF /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXApiManager.m; path = "../../../../Desktop/SDKSample_ios9_v2.0.2_V3_pay 2/SDKSample_v2.0.2_V3pay/Control/WXApiManager.m"; sourceTree = "<group>"; };
 		EC5826CD1FFBC5FD009758A3 /* GZM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GZM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5826D71FFBC5FE009758A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC5826D91FFBC5FE009758A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +107,15 @@
 		EC58274D1FFDE80D009758A3 /* YSLoopBanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSLoopBanner.h; sourceTree = "<group>"; };
 		EC58274E1FFDE80D009758A3 /* YSLoopBanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSLoopBanner.m; sourceTree = "<group>"; };
 		EC5827501FFDFBE2009758A3 /* MenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenViewController.xib; sourceTree = "<group>"; };
+		ECF0E78F2012206D00BD58C7 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXApiManager.m; path = ../../../../Downloads/SDKSample_ios9_v2.0.2_V3_pay/SDKSample_v2.0.2_V3pay/Control/WXApiManager.m; sourceTree = "<group>"; };
+		ECF0E7902012206E00BD58C7 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApiManager.h; path = ../../../../Downloads/SDKSample_ios9_v2.0.2_V3_pay/SDKSample_v2.0.2_V3pay/Control/WXApiManager.h; sourceTree = "<group>"; };
+		ECF0E794201220E100BD58C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		ECF0E796201220E100BD58C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ViewController_iPad.xib; sourceTree = "<group>"; };
+		ECF0E798201220E100BD58C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
+		ECF0E79B201220E100BD58C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECF0E79D201220E100BD58C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		ECF0E7A32012DD0B00BD58C7 /* Guaitab.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Guaitab.h; sourceTree = "<group>"; };
+		ECF0E7A42012DD0B00BD58C7 /* Guaitab.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Guaitab.m; sourceTree = "<group>"; };
 		ECF1C4F11FFF4231005AB7D4 /* GuaishowTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuaishowTableViewController.h; sourceTree = "<group>"; };
 		ECF1C4F21FFF4231005AB7D4 /* GuaishowTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuaishowTableViewController.m; sourceTree = "<group>"; };
 		ECFF84861FFF722600203881 /* GuaishowTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuaishowTableViewController.xib; sourceTree = "<group>"; };
@@ -182,6 +195,8 @@
 		EC5826CF1FFBC5FD009758A3 /* GZM */ = {
 			isa = PBXGroup;
 			children = (
+				ECF0E799201220E100BD58C7 /* Base.lproj */,
+				ECF0E792201220E100BD58C7 /* en.lproj */,
 				ECFF84C82004AB4100203881 /* WechatSDK1.8.2 */,
 				ECFF84B62004979800203881 /* wx */,
 				EC58271B1FFBCF66009758A3 /* Class */,
@@ -333,6 +348,8 @@
 				EC469172200A3F920061C1AF /* ChapterListModel.m */,
 				EC469186200C3A5B0061C1AF /* pinglunModel.h */,
 				EC469187200C3A5B0061C1AF /* pinglunModel.m */,
+				ECF0E7A32012DD0B00BD58C7 /* Guaitab.h */,
+				ECF0E7A42012DD0B00BD58C7 /* Guaitab.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -359,6 +376,25 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		ECF0E792201220E100BD58C7 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				ECF0E793201220E100BD58C7 /* InfoPlist.strings */,
+				ECF0E795201220E100BD58C7 /* ViewController_iPad.xib */,
+				ECF0E797201220E100BD58C7 /* ViewController_iPhone.xib */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		ECF0E799201220E100BD58C7 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				ECF0E79A201220E100BD58C7 /* LaunchScreen.storyboard */,
+				ECF0E79C201220E100BD58C7 /* Main.storyboard */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 		ECFF848E1FFFD1A700203881 /* main */ = {
@@ -440,8 +476,8 @@
 		ECFF84C82004AB4100203881 /* WechatSDK1.8.2 */ = {
 			isa = PBXGroup;
 			children = (
-				EC469190200CC6230061C1AF /* WXApiManager.h */,
-				EC469191200CC6230061C1AF /* WXApiManager.m */,
+				ECF0E7902012206E00BD58C7 /* WXApiManager.h */,
+				ECF0E78F2012206D00BD58C7 /* WXApiManager.m */,
 				ECFF84C92004AB4100203881 /* WXApi.h */,
 				ECFF84CA2004AB4100203881 /* WXApiObject.h */,
 				ECFF84CB2004AB4100203881 /* README.txt */,
@@ -545,13 +581,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECF0E79F201220E200BD58C7 /* ViewController_iPad.xib in Resources */,
 				EC46918D200C3B300061C1AF /* PinglunTableViewCell.xib in Resources */,
+				ECF0E79E201220E200BD58C7 /* InfoPlist.strings in Resources */,
+				ECF0E7A1201220E200BD58C7 /* LaunchScreen.storyboard in Resources */,
 				ECFF84B2200453DA00203881 /* WMTADViewController.xib in Resources */,
 				EC5826DD1FFBC5FE009758A3 /* LaunchScreen.storyboard in Resources */,
 				ECFF84CE2004AB4100203881 /* README.txt in Resources */,
 				ECFF849620008FF600203881 /* ZhangViewController.xib in Resources */,
+				ECF0E7A0201220E200BD58C7 /* ViewController_iPhone.xib in Resources */,
 				EC5826DA1FFBC5FE009758A3 /* Assets.xcassets in Resources */,
 				EC5826D81FFBC5FE009758A3 /* Main.storyboard in Resources */,
+				ECF0E7A2201220E200BD58C7 /* Main.storyboard in Resources */,
 				EC58274A1FFDC6AD009758A3 /* GuaitableViewcell.xib in Resources */,
 				ECFF849B2000A68100203881 /* TableViewCell.xib in Resources */,
 				ECFF84871FFF722600203881 /* GuaishowTableViewController.xib in Resources */,
@@ -638,14 +679,15 @@
 				EC4691702008933B0061C1AF /* Fication.m in Sources */,
 				EC58272D1FFBD004009758A3 /* main.m in Sources */,
 				EC469185200A64310061C1AF /* UIView+Layout.m in Sources */,
-				EC469192200CC6230061C1AF /* WXApiManager.m in Sources */,
 				ECF1C4F31FFF4231005AB7D4 /* GuaishowTableViewController.m in Sources */,
 				ECFF84B1200453DA00203881 /* WMTADViewController.m in Sources */,
+				ECF0E7A52012DD0B00BD58C7 /* Guaitab.m in Sources */,
 				EC5827491FFDC6AD009758A3 /* GuaitableViewcell.m in Sources */,
 				EC114DD52010C047007B0F6C /* GuaiTabViewController.m in Sources */,
 				EC58274F1FFDE80D009758A3 /* YSLoopBanner.m in Sources */,
 				ECFF849E2000AE4B00203881 /* ZhangModel.m in Sources */,
 				EC58272C1FFBD004009758A3 /* AppDelegate.m in Sources */,
+				ECF0E7912012206E00BD58C7 /* WXApiManager.m in Sources */,
 				EC46916D200866D10061C1AF /* ZhangBannerModel.m in Sources */,
 				EC469188200C3A5B0061C1AF /* pinglunModel.m in Sources */,
 				ECFF84A12000AE5B00203881 /* DakaModel.m in Sources */,
@@ -688,6 +730,46 @@
 				EC5826DC1FFBC5FE009758A3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		ECF0E793201220E100BD58C7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECF0E794201220E100BD58C7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ECF0E795201220E100BD58C7 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECF0E796201220E100BD58C7 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		ECF0E797201220E100BD58C7 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECF0E798201220E100BD58C7 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		ECF0E79A201220E100BD58C7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECF0E79B201220E100BD58C7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		ECF0E79C201220E100BD58C7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECF0E79D201220E100BD58C7 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

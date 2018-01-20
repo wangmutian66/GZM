@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 @class GuaiModelcell;
+@class Guaitab;
 @interface GuaitableViewcell : UITableViewCell
 @property(nonatomic,strong) GuaiModelcell *item;
+@property(nonatomic,strong) Guaitab *itemtab;
+
 @property (weak, nonatomic) IBOutlet UIImageView *booksImg;
 @property (weak, nonatomic) IBOutlet UILabel *booksName;
 

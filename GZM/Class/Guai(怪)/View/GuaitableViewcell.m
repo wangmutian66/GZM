@@ -9,7 +9,7 @@
 #import "GuaitableViewcell.h"
 #import "GuaiModelcell.h"
 #import "UIImageView+WebCache.h"
-
+#import "Guaitab.h"
 @implementation GuaitableViewcell
 -(void)setItem:(GuaiModelcell *) item{
     _item=item;
@@ -23,6 +23,20 @@
     [_booksImg sd_setImageWithURL:[NSURL URLWithString:imageUlr] placeholderImage:[UIImage imageNamed:@"AppIcon"]];
     
 }
+-(void)setItemtab:(Guaitab *) itemtab{
+    _itemtab=itemtab;
+     NSLog(@">>>>>>>>>>%@",itemtab.booksName);
+    _booksName.text=itemtab.booksName;
+    _booksSynopsis.text=itemtab.booksSynopsis;
+    _authorName.text=[NSString stringWithFormat:@"%@  著",itemtab.autherName];
+    
+    
+    NSString *imageUlr=[NSString stringWithFormat:@"http://%@",itemtab.booksImg];
+    [_booksImg sd_setImageWithURL:[NSURL URLWithString:imageUlr] placeholderImage:[UIImage imageNamed:@"AppIcon"]];
+}
+
+
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
