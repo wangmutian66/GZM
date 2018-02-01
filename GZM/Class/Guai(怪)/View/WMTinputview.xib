@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WMTinputview">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dv7-Ll-UGg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQT-0c-A0H">
+                    <rect key="frame" x="0.0" y="44" width="375" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJp-1O-9ju" userLabel="表情">
+                    <rect key="frame" x="5" y="5" width="34" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="34" id="CHW-I6-Eyf"/>
+                        <constraint firstAttribute="height" constant="34" id="EGg-i6-pyt"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="ToolViewEmotion"/>
+                    <state key="highlighted" backgroundImage="ToolViewEmotionHL"/>
+                    <connections>
+                        <action selector="biaoqing1:" destination="iN0-l3-epB" eventType="touchUpInside" id="u0o-Bp-YVC"/>
+                        <action selector="biaoqing:" destination="-1" eventType="touchUpInside" id="eAs-XW-dLr"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入内容" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Md-E6-5Kz">
+                    <rect key="frame" x="44" y="5" width="326" height="34"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czt-gj-63V" userLabel="键盘">
+                    <rect key="frame" x="5" y="5" width="34" height="34"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    <state key="normal" image="ToolViewInputText"/>
+                    <state key="highlighted" image="ToolViewInputTextHL"/>
+                    <connections>
+                        <action selector="jianpanb1:" destination="iN0-l3-epB" eventType="touchUpInside" id="99R-TJ-oo4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5Md-E6-5Kz" secondAttribute="trailing" constant="5" id="03D-QG-uG6"/>
+                <constraint firstItem="Czt-gj-63V" firstAttribute="top" secondItem="tJp-1O-9ju" secondAttribute="top" id="0Uk-2R-znQ"/>
+                <constraint firstItem="Czt-gj-63V" firstAttribute="leading" secondItem="tJp-1O-9ju" secondAttribute="leading" id="4At-IV-9j0"/>
+                <constraint firstItem="5Md-E6-5Kz" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="CZG-5z-ReN"/>
+                <constraint firstItem="tJp-1O-9ju" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="PEZ-dX-fIf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5Md-E6-5Kz" secondAttribute="bottom" constant="5" id="RWD-93-Q3B"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="tJp-1O-9ju" secondAttribute="bottom" constant="5" id="VMc-XV-7Ew"/>
+                <constraint firstItem="Czt-gj-63V" firstAttribute="trailing" secondItem="tJp-1O-9ju" secondAttribute="trailing" id="XS0-ez-hLN"/>
+                <constraint firstItem="5Md-E6-5Kz" firstAttribute="leading" secondItem="tJp-1O-9ju" secondAttribute="trailing" constant="5" id="nsH-uB-SkY"/>
+                <constraint firstItem="tJp-1O-9ju" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="yPD-41-law"/>
+                <constraint firstItem="Czt-gj-63V" firstAttribute="bottom" secondItem="tJp-1O-9ju" secondAttribute="bottom" id="ycZ-gS-gW1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="jianpanbtn" destination="Czt-gj-63V" id="WKb-L1-Aos"/>
+                <outlet property="testfield" destination="5Md-E6-5Kz" id="zhZ-vr-dtP"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="ToolViewEmotion" width="35" height="35"/>
+        <image name="ToolViewEmotionHL" width="35" height="35"/>
+        <image name="ToolViewInputText" width="35" height="35"/>
+        <image name="ToolViewInputTextHL" width="35" height="35"/>
+    </resources>
+</document>

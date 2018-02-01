@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class GuaishowTableViewController;
+@protocol GuaishowTableViewController <NSObject>
+@optional
+/** 滚动发生 **/
+- (void)scrollappend;
+
+@end
+
 @interface GuaishowTableViewController : UITableViewController
 - (instancetype)initWithUserInfo:(NSString *) bookId;
 @property (weak, nonatomic) IBOutlet UIImageView *bookimg;
@@ -22,5 +30,6 @@
 @property (weak, nonatomic) IBOutlet UIView *kechenglog;
 @property (weak, nonatomic) IBOutlet UIView *tableviewheader;
 @property (weak, nonatomic) IBOutlet UIView *tablefooter;
-
+/** 代理 */
+@property (nonatomic, weak) id<GuaishowTableViewController> delegate;
 @end

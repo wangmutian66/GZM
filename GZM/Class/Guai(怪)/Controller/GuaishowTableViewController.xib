@@ -20,7 +20,6 @@
                 <outlet property="bookname" destination="hjo-xY-9bL" id="f2O-yk-qpQ"/>
                 <outlet property="kechenglog" destination="tWz-SU-wcy" id="niK-Qb-wAu"/>
                 <outlet property="profile" destination="0G7-h3-MCK" id="RYh-7d-e5V"/>
-                <outlet property="tablefooter" destination="LwV-xe-e0n" id="3Og-4d-IsZ"/>
                 <outlet property="tableviewheader" destination="fFT-rR-tbT" id="6Yu-ow-vXC"/>
                 <outlet property="view" destination="HGz-y4-cgP" id="DRo-fe-eYC"/>
             </connections>
@@ -177,13 +176,6 @@
                     <constraint firstItem="i2u-Tc-8e0" firstAttribute="bottom" secondItem="8sx-GA-nmg" secondAttribute="bottom" constant="5" id="woi-fx-pjk"/>
                 </constraints>
                 <viewLayoutGuide key="safeArea" id="i2u-Tc-8e0"/>
-            </view>
-            <view key="tableFooterView" contentMode="bottom" semanticContentAttribute="spatial" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" id="LwV-xe-e0n" userLabel="tablefooter">
-                <rect key="frame" x="0.0" y="1585" width="375" height="70"/>
-                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                <color key="backgroundColor" red="0.5851672887802124" green="0.95012229681015015" blue="0.035116564482450485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="0.0" right="8"/>
-                <viewLayoutGuide key="safeArea" id="1f6-Ro-vQ3"/>
             </view>
             <point key="canvasLocation" x="32.5" y="-132.5"/>
         </tableView>

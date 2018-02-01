@@ -17,6 +17,11 @@
 		EC469188200C3A5B0061C1AF /* pinglunModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC469187200C3A5B0061C1AF /* pinglunModel.m */; };
 		EC46918C200C3B300061C1AF /* PinglunTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC46918A200C3B300061C1AF /* PinglunTableViewCell.m */; };
 		EC46918D200C3B300061C1AF /* PinglunTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC46918B200C3B300061C1AF /* PinglunTableViewCell.xib */; };
+		EC5007802022CB1D00B4B7DE /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = EC50077F2022CB1D00B4B7DE /* UIView+Frame.m */; };
+		EC5007862022CD3800B4B7DE /* WmtBiaoqingboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5007812022CD3700B4B7DE /* WmtBiaoqingboardView.m */; };
+		EC5007872022CD3800B4B7DE /* WMTinputview.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC5007832022CD3700B4B7DE /* WMTinputview.xib */; };
+		EC5007882022CD3800B4B7DE /* WMTinputview.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5007852022CD3700B4B7DE /* WMTinputview.m */; };
+		EC50078C2022F28100B4B7DE /* GuaishowTableView2.m in Sources */ = {isa = PBXBuildFile; fileRef = EC50078A2022F28100B4B7DE /* GuaishowTableView2.m */; };
 		EC5826D81FFBC5FE009758A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5826D61FFBC5FE009758A3 /* Main.storyboard */; };
 		EC5826DA1FFBC5FE009758A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC5826D91FFBC5FE009758A3 /* Assets.xcassets */; };
 		EC5826DD1FFBC5FE009758A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC5826DB1FFBC5FE009758A3 /* LaunchScreen.storyboard */; };
@@ -30,6 +35,9 @@
 		EC58274A1FFDC6AD009758A3 /* GuaitableViewcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC5827481FFDC6AD009758A3 /* GuaitableViewcell.xib */; };
 		EC58274F1FFDE80D009758A3 /* YSLoopBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = EC58274E1FFDE80D009758A3 /* YSLoopBanner.m */; };
 		EC5827511FFDFBE2009758A3 /* MenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC5827501FFDFBE2009758A3 /* MenViewController.xib */; };
+		ECF029A320230696004F4DB9 /* GuaishowTableView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF029A220230695004F4DB9 /* GuaishowTableView2.xib */; };
+		ECF029A62023320A004F4DB9 /* Men2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF029A52023320A004F4DB9 /* Men2ViewController.m */; };
+		ECF029A82023326D004F4DB9 /* Men2ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF029A72023326D004F4DB9 /* Men2ViewController.storyboard */; };
 		ECF0E7912012206E00BD58C7 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF0E78F2012206D00BD58C7 /* WXApiManager.m */; };
 		ECF0E79E201220E200BD58C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECF0E793201220E100BD58C7 /* InfoPlist.strings */; };
 		ECF0E79F201220E200BD58C7 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF0E795201220E100BD58C7 /* ViewController_iPad.xib */; };
@@ -84,6 +92,15 @@
 		EC469189200C3B300061C1AF /* PinglunTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PinglunTableViewCell.h; sourceTree = "<group>"; };
 		EC46918A200C3B300061C1AF /* PinglunTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinglunTableViewCell.m; sourceTree = "<group>"; };
 		EC46918B200C3B300061C1AF /* PinglunTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PinglunTableViewCell.xib; sourceTree = "<group>"; };
+		EC50077E2022CB0900B4B7DE /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+Frame.h"; path = "../../../../HX/HX/Class/other/UIView+Frame.h"; sourceTree = "<group>"; };
+		EC50077F2022CB1D00B4B7DE /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Frame.m"; path = "../../../../HX/HX/Class/other/UIView+Frame.m"; sourceTree = "<group>"; };
+		EC5007812022CD3700B4B7DE /* WmtBiaoqingboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WmtBiaoqingboardView.m; sourceTree = "<group>"; };
+		EC5007822022CD3700B4B7DE /* WmtBiaoqingboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WmtBiaoqingboardView.h; sourceTree = "<group>"; };
+		EC5007832022CD3700B4B7DE /* WMTinputview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMTinputview.xib; sourceTree = "<group>"; };
+		EC5007842022CD3700B4B7DE /* WMTinputview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMTinputview.h; sourceTree = "<group>"; };
+		EC5007852022CD3700B4B7DE /* WMTinputview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMTinputview.m; sourceTree = "<group>"; };
+		EC5007892022F28100B4B7DE /* GuaishowTableView2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuaishowTableView2.h; sourceTree = "<group>"; };
+		EC50078A2022F28100B4B7DE /* GuaishowTableView2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuaishowTableView2.m; sourceTree = "<group>"; };
 		EC5826CD1FFBC5FD009758A3 /* GZM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GZM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5826D71FFBC5FE009758A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC5826D91FFBC5FE009758A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +124,10 @@
 		EC58274D1FFDE80D009758A3 /* YSLoopBanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSLoopBanner.h; sourceTree = "<group>"; };
 		EC58274E1FFDE80D009758A3 /* YSLoopBanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSLoopBanner.m; sourceTree = "<group>"; };
 		EC5827501FFDFBE2009758A3 /* MenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenViewController.xib; sourceTree = "<group>"; };
+		ECF029A220230695004F4DB9 /* GuaishowTableView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GuaishowTableView2.xib; sourceTree = "<group>"; };
+		ECF029A42023320A004F4DB9 /* Men2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Men2ViewController.h; sourceTree = "<group>"; };
+		ECF029A52023320A004F4DB9 /* Men2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Men2ViewController.m; sourceTree = "<group>"; };
+		ECF029A72023326D004F4DB9 /* Men2ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Men2ViewController.storyboard; sourceTree = "<group>"; };
 		ECF0E78F2012206D00BD58C7 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXApiManager.m; path = ../../../../Downloads/SDKSample_ios9_v2.0.2_V3_pay/SDKSample_v2.0.2_V3pay/Control/WXApiManager.m; sourceTree = "<group>"; };
 		ECF0E7902012206E00BD58C7 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApiManager.h; path = ../../../../Downloads/SDKSample_ios9_v2.0.2_V3_pay/SDKSample_v2.0.2_V3pay/Control/WXApiManager.h; sourceTree = "<group>"; };
 		ECF0E794201220E100BD58C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
@@ -243,6 +264,8 @@
 		EC58271D1FFBCF66009758A3 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				EC50077F2022CB1D00B4B7DE /* UIView+Frame.m */,
+				EC50077E2022CB0900B4B7DE /* UIView+Frame.h */,
 				EC58272A1FFBD004009758A3 /* AppDelegate.h */,
 				EC5827291FFBD004009758A3 /* AppDelegate.m */,
 				EC58272B1FFBD004009758A3 /* main.m */,
@@ -311,6 +334,11 @@
 		EC5827231FFBCFF3009758A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EC5007822022CD3700B4B7DE /* WmtBiaoqingboardView.h */,
+				EC5007812022CD3700B4B7DE /* WmtBiaoqingboardView.m */,
+				EC5007842022CD3700B4B7DE /* WMTinputview.h */,
+				EC5007852022CD3700B4B7DE /* WMTinputview.m */,
+				EC5007832022CD3700B4B7DE /* WMTinputview.xib */,
 				EC5827461FFDC6AD009758A3 /* GuaitableViewcell.h */,
 				EC5827471FFDC6AD009758A3 /* GuaitableViewcell.m */,
 				EC5827481FFDC6AD009758A3 /* GuaitableViewcell.xib */,
@@ -331,6 +359,9 @@
 				ECFF84861FFF722600203881 /* GuaishowTableViewController.xib */,
 				EC114DD32010C047007B0F6C /* GuaiTabViewController.h */,
 				EC114DD42010C047007B0F6C /* GuaiTabViewController.m */,
+				EC5007892022F28100B4B7DE /* GuaishowTableView2.h */,
+				EC50078A2022F28100B4B7DE /* GuaishowTableView2.m */,
+				ECF029A220230695004F4DB9 /* GuaishowTableView2.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -360,6 +391,9 @@
 				EC5827341FFBD0BF009758A3 /* MenViewController.h */,
 				EC5827351FFBD0BF009758A3 /* MenViewController.m */,
 				EC5827501FFDFBE2009758A3 /* MenViewController.xib */,
+				ECF029A42023320A004F4DB9 /* Men2ViewController.h */,
+				ECF029A52023320A004F4DB9 /* Men2ViewController.m */,
+				ECF029A72023326D004F4DB9 /* Men2ViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -587,6 +621,9 @@
 				ECF0E7A1201220E200BD58C7 /* LaunchScreen.storyboard in Resources */,
 				ECFF84B2200453DA00203881 /* WMTADViewController.xib in Resources */,
 				EC5826DD1FFBC5FE009758A3 /* LaunchScreen.storyboard in Resources */,
+				EC5007872022CD3800B4B7DE /* WMTinputview.xib in Resources */,
+				ECF029A320230696004F4DB9 /* GuaishowTableView2.xib in Resources */,
+				ECF029A82023326D004F4DB9 /* Men2ViewController.storyboard in Resources */,
 				ECFF84CE2004AB4100203881 /* README.txt in Resources */,
 				ECFF849620008FF600203881 /* ZhangViewController.xib in Resources */,
 				ECF0E7A0201220E200BD58C7 /* ViewController_iPhone.xib in Resources */,
@@ -673,6 +710,7 @@
 				EC5827401FFCFBEB009758A3 /* GuaiModelcell.m in Sources */,
 				EC5827361FFBD0BF009758A3 /* MenViewController.m in Sources */,
 				ECFF84A92003724D00203881 /* TabBarController.m in Sources */,
+				EC5007882022CD3800B4B7DE /* WMTinputview.m in Sources */,
 				EC469176200A4C250061C1AF /* MYTapGestureRecognizer.m in Sources */,
 				EC46918C200C3B300061C1AF /* PinglunTableViewCell.m in Sources */,
 				ECFF849420008F7F00203881 /* ZhangViewController.m in Sources */,
@@ -688,9 +726,13 @@
 				ECFF849E2000AE4B00203881 /* ZhangModel.m in Sources */,
 				EC58272C1FFBD004009758A3 /* AppDelegate.m in Sources */,
 				ECF0E7912012206E00BD58C7 /* WXApiManager.m in Sources */,
+				EC50078C2022F28100B4B7DE /* GuaishowTableView2.m in Sources */,
+				EC5007862022CD3800B4B7DE /* WmtBiaoqingboardView.m in Sources */,
 				EC46916D200866D10061C1AF /* ZhangBannerModel.m in Sources */,
 				EC469188200C3A5B0061C1AF /* pinglunModel.m in Sources */,
 				ECFF84A12000AE5B00203881 /* DakaModel.m in Sources */,
+				EC5007802022CB1D00B4B7DE /* UIView+Frame.m in Sources */,
+				ECF029A62023320A004F4DB9 /* Men2ViewController.m in Sources */,
 				EC469173200A3F920061C1AF /* ChapterListModel.m in Sources */,
 				ECFF849A2000A68100203881 /* TableViewCell.m in Sources */,
 				EC5827451FFDC0DD009758A3 /* GuaiTableViewController.m in Sources */,

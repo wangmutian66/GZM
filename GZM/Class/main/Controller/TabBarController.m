@@ -10,7 +10,7 @@
 #import "ZhangViewController.h"
 #import "MenViewController.h"
 #import "GuaiTableViewController.h"
-
+#import "Men2ViewController.h"
 @interface TabBarController ()
 
 @end
@@ -29,10 +29,15 @@
     UINavigationController *nav1=[[UINavigationController alloc] initWithRootViewController:zhang];
     [self addChildViewController:nav1];
     
-    MenViewController *men=[[MenViewController alloc] init];
-    UINavigationController *nav2=[[UINavigationController alloc] initWithRootViewController:men];
-    [self addChildViewController:nav2];
+//    MenViewController *men=[[MenViewController alloc] init];
+//    UINavigationController *nav2=[[UINavigationController alloc] initWithRootViewController:men];
+//    [self addChildViewController:nav2];
     
+//        Men2ViewController *men=[Men2ViewController men2view];
+    UIStoryboard *storyboard=[UIStoryboard storyboardWithName:NSStringFromClass([Men2ViewController class]) bundle:nil];
+    Men2ViewController *men = [storyboard instantiateInitialViewController];
+        UINavigationController *nav2=[[UINavigationController alloc] initWithRootViewController:men];
+        [self addChildViewController:nav2];
     
     nav.tabBarItem.title=@"怪";
     nav.tabBarItem.image=[UIImage imageNamed:@"guai"];

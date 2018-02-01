@@ -41,7 +41,6 @@ NSString *BID;
 @implementation GuaishowTableViewController
 - (instancetype)initWithUserInfo:(NSString *) bookId {
     if (self = [super init]) {
-//        NSLog(@"----->bookid:%@", bookId);
         BID=bookId;
     }
     return self;
@@ -49,23 +48,23 @@ NSString *BID;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom] ;
-    [btn setTitle:@"返回" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithCustomView:btn];
-    
-
+//    UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom] ;
+//    [btn setTitle:@"返回" forState:UIControlStateNormal];
+//    [btn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+//    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithCustomView:btn];
+//
+//     self.tableView.scrollEnabled = NO;
     [self bookhttp];
     
     [self fixview];
     
-
-}
-
--(void)back{
-    [self.navigationController popViewControllerAnimated:YES];
     
 }
+
+//-(void)back{
+//    [self.navigationController popViewControllerAnimated:YES];
+//
+//}
 
 
 
@@ -73,28 +72,10 @@ NSString *BID;
     //Add a container view as self.view and the superview of the tableview
     self.listtableView = (UITableView *)self.view;
     UIView *containerView = [[UIView alloc] initWithFrame:self.view.frame];
-    self.tableView.frame = self.listtableView.bounds;
+//    self.tableView.frame = self.listtableView.bounds;
+    self.tableView.frame=CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-110);
     self.view = containerView;
     [containerView addSubview:self.listtableView];
-    //add the view as a subview of the container view, it will be fixed on the top
-    UIView *buttonview = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenH - 50, kScreenW, 50)];
-    //    buttonview.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
-    buttonview.backgroundColor=[UIColor whiteColor];
-    [self.view addSubview:buttonview];
-    // 添加边框
-    CALayer * layer = [buttonview layer];
-
-    layer.borderColor = [[UIColor redColor] CGColor];
-    layer.borderWidth = 1.0f;
-    
-    
-    //添加图片
-    UIImageView  *imageView=[[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 40, 40)];
-    [imageView setImage:[UIImage imageNamed:@"iconheader_03"]];
-    [buttonview addSubview:imageView];
-    //添加输入框
-    
-    
 }
 
 
@@ -126,33 +107,33 @@ NSString *BID;
     [mgr POST:path parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary  * _Nullable responseObject) {
         
         [responseObject writeToFile:@"/Users/apple/Desktop/111/P.plist" atomically:YES];
-         NSDictionary *adDict=responseObject[@"dataList"][@"books"] ;
+        NSDictionary *adDict=responseObject[@"dataList"][@"books"] ;
         NSDictionary *author=responseObject[@"dataList"][@"author"] ;
         NSDictionary *chapterList=responseObject[@"dataList"][@"chapterList"] ;
-         NSDictionary *commentList=responseObject[@"dataList"][@"commentList"] ;
-         _pinglun = [pinglunModel mj_objectArrayWithKeyValuesArray:commentList];
-//        pinglun
+        NSDictionary *commentList=responseObject[@"dataList"][@"commentList"] ;
+        _pinglun = [pinglunModel mj_objectArrayWithKeyValuesArray:commentList];
+        //        pinglun
         
         _bookname.text=adDict[@"booksName"];
         _bookdesc.text=adDict[@"booksSynopsis"];
         _authname.text=author[@"name"];
         _authdesc.text=author[@"profile"];
-         _profile.text=author[@"detailedProfile"];
+        _profile.text=author[@"detailedProfile"];
         
         NSString *booksImg=[NSString stringWithFormat:@"http://%@",adDict[@"booksImg"]];
         [_bookimg sd_setImageWithURL:[NSURL URLWithString:booksImg] placeholderImage:[UIImage imageNamed:@"AppIcon"]];
         NSString *authorimg=[NSString stringWithFormat:@"http://%@",author[@"headImg"]];
         [_autuimg sd_setImageWithURL:[NSURL URLWithString:authorimg] placeholderImage:[UIImage imageNamed:@"iconheader_03"]];
         
-            
-       
+        
+        
         _subTasgchpater= [ChapterListModel mj_objectArrayWithKeyValuesArray:chapterList];
         int keheight=120;
         _tableviewheader.heiht=451 + 57 + keheight*[_subTasgchpater count] + 10+47;
-
+        
         for(NSInteger i=0; i<[_subTasgchpater count];i++){
             ChapterListModel *chapter=_subTasgchpater[i];
-
+            
             UIView * view =[[UIView alloc] init];
             //打开用户交互(不可少)
             view.userInteractionEnabled = YES;
@@ -167,14 +148,14 @@ NSString *BID;
             //添加图片视图
             UIView *viewimage=[[UIView alloc] init];
             viewimage.frame=CGRectMake(0, 0, 90, view.bounds.size.height);
-//            viewimage.backgroundColor=[UIColor grayColor];
+            //            viewimage.backgroundColor=[UIColor grayColor];
             [view addSubview:viewimage];
             
             UIImage *image = [UIImage imageNamed:@"AppIcon"];
             UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
             NSString *imageUlr=[NSString stringWithFormat:@"http://%@",chapter.chapterImg];
             
-  
+            
             
             CGFloat viewimagewidth= viewimage.bounds.size.width;
             CGFloat viewimageheight= viewimage.bounds.size.height;
@@ -187,7 +168,7 @@ NSString *BID;
             if(imageViewwidth < imageViewheight){
                 imageView.frame=CGRectMake(0, 0, imageViewwidth/imageViewheight*viewimageheight, viewimageheight);
             }else{
-                 imageView.frame=CGRectMake(0, 0, viewimagewidth, imageViewheight/imageViewwidth*viewimagewidth);
+                imageView.frame=CGRectMake(0, 0, viewimagewidth, imageViewheight/imageViewwidth*viewimagewidth);
             }
             //自适应图片宽高比例
             imageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -199,13 +180,13 @@ NSString *BID;
             //添加文字
             UIView *viewtext=[[UIView alloc] init];
             viewtext.frame=CGRectMake(100, 0, view.bounds.size.width - 100, view.bounds.size.height);
-//            viewtext.backgroundColor=[UIColor grayColor];
+            //            viewtext.backgroundColor=[UIColor grayColor];
             [view addSubview:viewtext];
             
             UIView *viewtitle=[[UIView alloc] init];
             viewtitle.frame=CGRectMake(10, 10, viewtext.bounds.size.width-10, 30);
             [viewtext addSubview:viewtitle];
-
+            
             UILabel *labeltitle=[[UILabel alloc] init];
             labeltitle.text=chapter.chaptreName;
             labeltitle.font=[UIFont systemFontOfSize:22.0];
@@ -221,20 +202,20 @@ NSString *BID;
             UIImageView *imageicon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"time_clock"]];
             UIImage *time_clock = [UIImage imageNamed:@"time_clock"];
             UIImageView *time_clockview = [[UIImageView alloc] initWithImage:time_clock];
-
+            
             [iconview1 addSubview:time_clockview];
             
             
             UILabel *day=[[UILabel alloc] init];
             day.text=chapter.createTime;
             day.frame=CGRectMake(30, -5, 135, 35);
-             [iconview1 addSubview:day];
+            [iconview1 addSubview:day];
             
-//            UIImageView *imageicon1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"time_clock"]];
-//            UIImage *time_clock1 = [UIImage imageNamed:@"time_clock"];
-//            UIImageView *time_clockview1 = [[UIImageView alloc] initWithImage:time_clock];
-//
-//            [iconview1 addSubview:time_clockview1];
+            //            UIImageView *imageicon1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"time_clock"]];
+            //            UIImage *time_clock1 = [UIImage imageNamed:@"time_clock"];
+            //            UIImageView *time_clockview1 = [[UIImageView alloc] initWithImage:time_clock];
+            //
+            //            [iconview1 addSubview:time_clockview1];
             
             [self createImage:iconview1 rectMakex:0 rectMakey:0 rectMakewidth:25 rectMakexheight:25 imagename:@"time_clock"];
             
@@ -256,7 +237,7 @@ NSString *BID;
         
         
         
-//        NSLog(@"     -====--->%@",adDict[@"booksName"]);
+        //        NSLog(@"     -====--->%@",adDict[@"booksName"]);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"222");
     }];
@@ -273,7 +254,7 @@ NSString *BID;
 
 
 -(void)event:(UITapGestureRecognizer *)tapRecognizer {
-//    sender.view.tag;
+    //    sender.view.tag;
     MYTapGestureRecognizer *tap = (MYTapGestureRecognizer *)tapRecognizer;
     
     NSLog(@"data : %@", tap.data);
@@ -301,11 +282,11 @@ NSString *BID;
     NSString *ID=@"cell";
     PinglunTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if(cell == nil){
-       
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        
+        //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
         cell =[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([PinglunTableViewCell class]) owner:nil options:nil][0];
     }
-//    cell.textLabel.text=@"测试";
+    //    cell.textLabel.text=@"测试";
     pinglunModel *pinglun=self.pinglun[indexPath.row];
     cell.item=pinglun;
     return cell;
@@ -314,49 +295,61 @@ NSString *BID;
     return 144;
 }
 
+//监听滚动滚动
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    NSLog(@"广东跳了");
+    if ([self.delegate respondsToSelector:@selector(scrollappend)]) {
+        
+        [self.delegate scrollappend];
+        
+    }
+//    [self backinit];
+//    //叫键盘回去
+//    [self.view endEditing:YES];
+//    self.inputViewS.jianpanbtn.hidden=YES;
+}
+/*
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

@@ -21,6 +21,7 @@
 #import "Fication.h"
 #import "UIImageView+WebCache.h"
 #import "GuaiTabViewController.h"
+#import "GuaishowTableView2.h"
 
 YSLoopBanner *loop;
 @interface GuaiTableViewController ()<UIGestureRecognizerDelegate>
@@ -130,7 +131,6 @@ YSLoopBanner *loop;
     return cell;
 }
 
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 
 {
@@ -142,7 +142,8 @@ YSLoopBanner *loop;
     
     self.navigationController.view.backgroundColor = [UIColor whiteColor];
     GuaiModelcell *item = self.subTasg[indexPath.row];
-    GuaishowTableViewController  *guaishow=[[GuaishowTableViewController alloc] initWithUserInfo:item.booksId];
+//    GuaishowTableViewController  *guaishow=[[GuaishowTableViewController alloc] initWithUserInfo:item.booksId];
+    GuaishowTableView2 *guaishow = [[GuaishowTableView2 alloc] initWithUserInfo:item.booksId];
     guaishow.title=item.booksName;
     guaishow.view.backgroundColor =[UIColor whiteColor];
     guaishow.hidesBottomBarWhenPushed = YES;
@@ -370,6 +371,12 @@ YSLoopBanner *loop;
     tab.title=@"怪掌门";
     tab.view.backgroundColor =[UIColor whiteColor];
     tab.hidesBottomBarWhenPushed = YES;
+    
+//    GuaishowTableView2 *tab =[[GuaishowTableView2 alloc] init];
+//    tab.title=@"怪掌门";
+//    tab.view.backgroundColor =[UIColor whiteColor];
+//    tab.hidesBottomBarWhenPushed = YES;
+    
     
     // 属性传值：赋值
     //NSDictionary *userInfo = @{@"name":@"Charles", @"age":@(22)};
